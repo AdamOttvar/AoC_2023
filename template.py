@@ -3,6 +3,8 @@ import lib.AoC_lib as AoC
 @AoC.timer
 def first_part(input_file):
     result = 0
+    with open(input_file, 'r') as input:
+        for line in input:
 
     return result
 
@@ -10,7 +12,9 @@ def first_part(input_file):
 @AoC.timer
 def second_part(input_file):
     result = 0
-
+    with open(input_file, 'r') as input:
+        for line in input:
+            
     return result
 
 
