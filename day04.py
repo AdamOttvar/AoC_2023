@@ -24,11 +24,21 @@ def first_part(input_file):
 def second_part(input_file):
     result = 0
     nbr_of_cards = [1]*198
-    print(nbr_of_cards)
     with open(input_file, 'r') as input:
         for line in input:
-            break
-    return result
+            print(nbr_of_cards)
+            card_points = 0
+            card, numbers = line.split(': ')
+            card_id = int(line.split()[1].strip(':'))
+            winning_numbers, my_numbers = numbers.split('|')
+            winning_numbers = ' ' + winning_numbers + ' '
+            number_of_wins = 0
+            for number in my_numbers.split():
+                if ' '+number.strip()+' ' in winning_numbers:
+                    nbr_of_cards[card_id+number_of_wins] = nbr_of_cards[card_id+number_of_wins] + 1*nbr_of_cards[card_id-1]
+                    number_of_wins = number_of_wins + 1
+            
+    return sum(nbr_of_cards)
 
 
 if __name__ == '__main__':
