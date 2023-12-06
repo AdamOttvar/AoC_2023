@@ -5,7 +5,7 @@ def first_part(input_file):
     result = 0
     with open(input_file, 'r') as input:
         for line in input:
-
+            break
     return result
 
 
@@ -14,7 +14,7 @@ def second_part(input_file):
     result = 0
     with open(input_file, 'r') as input:
         for line in input:
-            
+            break
     return result
 
 
